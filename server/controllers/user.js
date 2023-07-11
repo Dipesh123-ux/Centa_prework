@@ -13,7 +13,7 @@ exports.userRegister = async (req, res, next) => {
     if (user) {
       user.password = password;
       await user.save();
-      await sendOTP(email, otp);
+      await sendOTP(email, otp,"Verify Yourself");
       return res.status(200).json({ msg: "success", email: email });
     }
 
@@ -210,7 +210,7 @@ exports.addUserData = async (req, res, next) => {
 
     const mailUser = await User.findById(user);
     await newRegistration.save();
-    await sendOTP(mailUser.email,"You have successfully Registered!");
+    await sendOTP(mailUser.email,"You have successfully Registered!","Registration Successfull");
     return res.status(200).json({
       msg: "success",
     });

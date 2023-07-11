@@ -2,13 +2,13 @@ require("dotenv").config();
 var SibApiV3Sdk = require("sib-api-v3-sdk");
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications["api-key"];
-apiKey.apiKey = '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'
+apiKey.apiKey = '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'
 
-exports.sendOTP =async (email, msg) => {
+exports.sendOTP =async (email, msg,subject) => {
 try{
   await new SibApiV3Sdk.TransactionalEmailsApi()
     .sendTransacEmail({
-      subject: "ENTER THIS OTP TO VERIFY YOURSELF!",
+      subject: `${subject}`,
       sender: { email: "jaswanidipesh8@gmail.com", name: "CENTA" },
       replyTo: { email: `jaswanidipesh8@gmail.com`, name: "CENTA" },
       to: [{ name: "dip", email: `${email}` }],
