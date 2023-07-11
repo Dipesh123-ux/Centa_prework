@@ -27,8 +27,7 @@ exports.adminRegister = async (req, res, next) => {
     });
 
     await admin.save();
-    await sendOTP(email, otp);
-
+    sendOTP(email, otp,"Verify Yourself");
     res.status(200).json({ msg: "success", email: email });
   } catch (err) {
     console.error(err);

@@ -1,8 +1,8 @@
-require("dotenv").config();
+require("dotenv").config({ path: "../.env" });
 var SibApiV3Sdk = require("sib-api-v3-sdk");
 var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications["api-key"];
-apiKey.apiKey = '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'
+apiKey.apiKey = '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'
 
 exports.sendOTP =async (email, msg,subject) => {
 try{

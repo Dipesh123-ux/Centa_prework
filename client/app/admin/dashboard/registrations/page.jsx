@@ -44,10 +44,10 @@ const Users = () => {
                                 key={user._id}
                                 className="bg-white p-4 rounded shadow-md"
                             >
-                                <h2 className="text-lg font-semibold mb-2">{user.user.name}</h2>
+                                <h2 className="text-lg font-semibold mb-2">{user?.user?.name}</h2>
                                 <p className="text-gray-600 mb-1">
                                     <span className="font-bold">Email: </span>
-                                    {user.user.email}
+                                    {user?.user?.email}
                                 </p>
                                 <p className="text-gray-600 mb-1">
                                     <span className="font-bold">State: </span>

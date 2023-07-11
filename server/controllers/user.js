@@ -26,7 +26,7 @@ exports.userRegister = async (req, res, next) => {
     });
 
     await user.save();
-    await sendOTP(email, otp);
+    await sendOTP(email, otp,"Verify Yourself");
 
     res.status(200).json({ msg: "success", email: email });
   } catch (err) {

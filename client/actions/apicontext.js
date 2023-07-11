@@ -6,7 +6,7 @@ const AuthState = ({ children }) => {
   const [user, setUser] = useState(null);
   const [email, setEmail] = useState("");
 
-  const url = "https://fair-red-marlin-tie.cyclic.app";
+  const url = "https://upset-jewelry-boa.cyclic.app/";
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
