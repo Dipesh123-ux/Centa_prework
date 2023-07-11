@@ -221,7 +221,6 @@ exports.deleteRegistration = async (req, res) => {
 exports.updateRegistration = async (req, res) => {
   try {
     const { state, city, subject, date, slot } = req.body;
-    console.log(req.body, req.params.id)
     const registration = await Registrations.findById(req.params.id);
     if (!registration) {
       return res.status(400).json({
