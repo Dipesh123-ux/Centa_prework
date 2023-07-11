@@ -208,7 +208,9 @@ exports.addUserData = async (req, res, next) => {
       slot,
     });
 
+    const mailUser = await User.findById(user);
     await newRegistration.save();
+    await sendOTP(mailUser.email,"You have successfully Registered!");
     return res.status(200).json({
       msg: "success",
     });
