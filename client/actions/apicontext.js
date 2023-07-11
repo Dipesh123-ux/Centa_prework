@@ -6,7 +6,7 @@ const AuthState = ({ children }) => {
   const [user, setUser] = useState(null);
   const [email, setEmail] = useState("");
 
-  const url = "http://localhost:8080";
+  const url = "https://fair-red-marlin-tie.cyclic.app";
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
